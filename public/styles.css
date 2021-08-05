@@ -128,7 +128,6 @@ body
 		left: 10px;
 		height: 490px;
 		top: 10px;
-		/* background-color: red; */
 		border-radius: 20px;
 		background-image: url("images/image.jpg");
 		background-size: cover;
@@ -139,5 +138,5 @@ body
 .envelope:hover .msg
 	{
 		top: -140px;
-		transition: 1s 2s ease; 
+		transition: 1s 2s ease;
 	}
