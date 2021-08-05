@@ -2,7 +2,11 @@
 	--primary: #ffce00;
 	--secondary: #fe4880;
 	--dark: #212121;
-	--light: #f3f3f3;
+	--base: #E98A1D;
+	--base-light: #6a5edb;
+	--base-dark: #392facd3;
+	--shadow: #da7d13d3;
+	--letter: #d8d7e5;
 }
 * {
     border: 0;
@@ -17,7 +21,8 @@ body
 		width: 100%;
         height: 100vh;
 		min-height: 100vh;
-		background-color: black;
+		/* background-color: black; */
+		background-image: linear-gradient(to bottom right, var(--base-dark), var(--base-light));
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -60,7 +65,7 @@ body
 	font-size: 30px;
 }
 .back-face {
-	background-color: var(--light);
+	background-color: var(--base-light);
 	transform: rotateY(180deg);
 }
 .envelope
@@ -82,9 +87,11 @@ body
         left: 0;
         width: 300px;
 		border-left: 300px solid transparent;
-		border-right: 300px solid #89caa3de;
+		/* border-right: 300px solid #89caa3de; */
+		border-right: 300px solid var(--base);
 		border-top: 150px solid transparent;
-		border-bottom: 350px solid #c5d5cb;
+		border-bottom: 350px solid var(--shadow);
+		/* border-bottom: 350px solid #c5d5cb; */
 		border-radius: 20px;
         box-sizing: border-box;
 		z-index: 30;
@@ -93,34 +100,29 @@ body
 	{
 		content: '';
 		position: absolute;
-		border-left: 300px solid #89caa3de;
+		border-left: 300px solid var(--base);
+		/* border-left: 300px solid #89caa3de; */
     	border-right: 300px solid transparent;
 		border-top: 150px solid transparent;
-		border-bottom: 350px solid #c5d5cb;
+		border-bottom: 350px solid var(--shadow);
+		/* border-bottom: 350px solid #c5d5cb; */
 		border-radius: 20px;
-        background: linear-gradient(30deg, var(--base-dark) 47%, var(--shadow) 50%, var(--base) 50%) 150px 90px/ 150px 90px no-repeat,
-    
-        linear-gradient(31deg, var(--base) 49%, var(--shadow) 50%, transparent 50%) 0px 0px/ 152px 90px no-repeat,
-        
-        linear-gradient(150deg, var(--base) 50%, var(--shadow) 50%, var(--base-dark) 53%) 0px 90px/ 151px 90px no-repeat,
-        
-        linear-gradient(148.7deg, transparent 50%, var(--shadow) 50%, var(--base) 51%) 150px 0px/ 150px 90px no-repeat;;
 	}
 .envelope .cover
 	{
 		position: absolute;
 		border-left: 300px solid transparent;
 		border-right: 300px solid transparent;
-		border-top: 150px solid #7a8b80;
+		border-top: 150px solid var(--shadow);
     	border-bottom: 350px solid transparent;
 		transform-origin: top;
-		transition:1s 1s ease;
+		transition:1s 2s ease;
 		z-index: 45;
 	}
 .envelope:hover .cover
 	{
 		transform: rotateX(180deg);
-		transition: 1s ease; 
+		transition: 1s 1s ease; 
 	}
 .envelope .msg
 	{
@@ -140,5 +142,5 @@ body
 .envelope:hover .msg
 	{
 		top: -140px;
-		transition: 1s 1s ease; 
+		transition: 1s 2s ease; 
 	}
