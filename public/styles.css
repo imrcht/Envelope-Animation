@@ -87,25 +87,22 @@ body
         left: 0;
         width: 300px;
 		border-left: 300px solid transparent;
-		/* border-right: 300px solid #89caa3de; */
 		border-right: 300px solid var(--base);
 		border-top: 150px solid transparent;
 		border-bottom: 350px solid var(--shadow);
-		/* border-bottom: 350px solid #c5d5cb; */
 		border-radius: 20px;
         box-sizing: border-box;
 		z-index: 30;
+		opacity: 1;
 	}
 .envelope:after
 	{
 		content: '';
 		position: absolute;
 		border-left: 300px solid var(--base);
-		/* border-left: 300px solid #89caa3de; */
     	border-right: 300px solid transparent;
 		border-top: 150px solid transparent;
 		border-bottom: 350px solid var(--shadow);
-		/* border-bottom: 350px solid #c5d5cb; */
 		border-radius: 20px;
 	}
 .envelope .cover
