@@ -41,7 +41,7 @@ body
 	cursor: pointer;
 	z-index: 4;
 }
-.inner_card.is-flipped {
+.inner_card.flipped {
 	transform: rotateY(180deg);
 }
 .face {
